@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CodeClass Live Coding Session</title>
+        <style type='text/css'>
+            textarea
+            {
+                resize: none;
+            }
+            .IdeChatTitles
+            {
+                white-space: nowrap;
+            }
+            .LeaveSessionButton
+            {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background-color: white;
+                border: 2px solid black;
+                color: green;
+                padding: 5px 10px;
+                text-align: center;
+                display: inline-block;
+                font-size: 20px;
+                margin: 10px 10px;
+                cursor: pointer;
+            }
+            .FlexClassHorizontal
+            {
+                display: flex;
+                flex-direction: row; 
+            }
+            .FlexClassVertical
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .FlexShrink
+            {
+                display: flex;
+                flex-shrink: 1;
+            }
+        </style>
+        <script type="text/javascript">
+
+            function eraseText() 
+            {
+                document.getElementById("SendChat").value = "";
+            }
+
+            function displayOut() 
+            {
+                var input = document.getElementById("SendChat").value;
+                if (input == null || input.trim() === '') 
+                {
+                    alert("Please enter a valid input");
+                    document.getElementById("SendChat").value = "";
+                    return;
+                }
+                var text2 = document.getElementById("SessionChat");
+                text2.value = text2.value +"\n\n" + input;
+    
+                eraseText();
+            }
+
+        </script>
+    </head>
+    <body>
+        <button class="LeaveSessionButton" 
+            onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+            Leave Session
+        </button>
+        <h1 style="text-align:center">Live Coding Session</h1>
+        <h3 style="text-align:center">Host: Username</h3>
+        <div class="IdeChatTitles">
+            <label for="HostIDE" style="padding-left:200px;">Host IDE</label>
+            <label for="MyIDE" style="padding-left:500px;">My IDE</label>
+            <label for="SessionChat" style="padding-left:430px;">Session Chat</label>
+        </div>
+        <div class="FlexClassHorizontal">
+            <textarea id="HostIDE" name="HostIDE" rows="39" cols="70" readonly></textarea>
+            <textarea id="MyIDE" name="MyIDE" rows="39" cols="70"></textarea>
+            <div class="FlexClassVertical">
+                <div class="FlexShrink">
+                    <textarea id="SendChat" name="SendChat" rows ="3" cols="49"></textarea>
+                    <button onclick="displayOut()">Post</button>
+                </div>
+                <textarea id="SessionChat" name="SessionChat" rows="36" cols="54" readonly></textarea>
+            </div>
+        </div>
+    </body>
+</html>
