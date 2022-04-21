@@ -1,40 +1,56 @@
 body 
 {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-#message-container 
+.main 
 {
-    width: 80%;
-    max-width: 1200px;
+  background: #eafaf1;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  height: 40vw;
+  overflow: auto; 
 }
 
-#message-container div 
+.clearfix::after 
 {
-    background-color: #CCC;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+#message-container > div
+{
+    width: max-content;
+    margin: 5px 10px;
+    background: #ABEBC6;
     padding: 5px;
+    border-radius: 6px;
+
+    float: right;
+    clear: both;
 }
 
-#message-container div:nth-child(2n) 
+#send-container
 {
-    background-color: #FFF;
+
+  background: #eafaf1;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
 }
 
-#send-container 
+#send-container > * 
 {
-    position: fixed;
-    padding-bottom: 30px;
-    bottom: 0;
-    background-color: white;
-    max-width: 1200px;
-    width: 80%;
-    display: flex;
+  padding: 14px 14px;
+  font-size: 16px;
 }
 
-#message-input 
+#send-container > input[type="text"] 
 {
-    flex-grow: 1;
+  flex: 1;
 }
+
