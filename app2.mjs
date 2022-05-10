@@ -116,7 +116,7 @@ function eraseText()
 }
 
 // function is used to print content of message from input box to chat box
-function displayOut() 
+window.displayOut = function displayOut() 
 {
     var input = document.getElementById("SendChat").value;
     if (input == null || input.trim() === '') 
