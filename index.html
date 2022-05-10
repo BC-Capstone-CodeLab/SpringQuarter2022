@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CodeClass Live Coding Session</title>
+        <link rel="stylesheet" href="App2.css"/>  
+        <script type="module" src="app2.mjs"></script>
+        <!--script type="module" src="bundle.js"></script-->
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase.js"></script>
+
+        <!-- Ace -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="libAce/ace.js"></script>
+        <script src="libAce/theme-monokai.js"></script>
+
+    </head>
+    <body>
+        <button class="LeaveSessionButton" 
+            onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+            Leave Session
+        </button>
+        <div class="control-panel">&nbsp;&nbsp;Language &nbsp; &nbsp;
+            <select id="languages" class="languages" onchange="changeLanguage()">
+              <option value = "c++"> c++ </option>
+              <option value = "java"> Java </option>
+              <option value = "python"> Python </option>
+              <option value = "node"> Node JS </option>
+            </select>
+        </div>
+        <button class="RunCodeButton" 
+            onclick="OpenNewWindow()">
+            Run Code
+        </button>
+        <h1 style="text-align:center">Live Coding Session</h1>
+        <h3 style="text-align:center">Host: Username</h3>
+        <div class="IdeChatTitles">
+            <label for="HostIDE" style="padding-left:200px;">Host IDE</label>
+            <label for="MyIDE" style="padding-left:500px;">My IDE</label>
+            <label for="SessionChat" style="padding-left:430px;">Session Chat</label>
+        </div>
+
+        
+        <div class="FlexClassHorizontal">
+            
+            <!--textarea id="HostIDE" name="HostIDE" rows="39" cols="70" readonly></textarea-->
+            <!--textarea id="MyIDE" name="MyIDE" rows="39" cols="70"></textarea-->
+            <div class="HostIDE" id="HostIDE"> <label for="HostIDE"></label></div>
+            <div class="MyIDE" id="MyIDE"> <label for="MyIDE"></label></div>
+
+            <div class="FlexClassVertical">
+                <div class="FlexShrink">
+                    <textarea id="SendChat" name="SendChat" rows ="3" cols="49"></textarea>
+                    <button onclick="displayOut()">Post</button>
+                </div>
+                <textarea id="SessionChat" name="SessionChat" rows="36" cols="54" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="output" id="output"></div>
+        
+    </body>
+</html>
