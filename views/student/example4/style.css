@@ -152,7 +152,7 @@ body, html
     font-size: 1.3rem;
     align-self: center
 }
-.nested-nav-bar-link
+.right-nav-bar .nested-nav-bar-link
 {
     text-decoration: none;
 
@@ -162,11 +162,11 @@ body, html
 
     border-radius: 8px;
     color: rgba(255, 255, 255, 0.655);
-    background: #2b2b2b;
+    background: #222222;
 }
 
-.nested-nav-bar-link:hover {
-    background-color: black; 
+.right-nav-bar .nested-nav-bar-link:hover {
+    background-color: #2b2b2b; 
     color: white;
 }
 
@@ -237,6 +237,7 @@ body, html
 {
     background: #2b2b2b !important;
 }
+
 
 li:hover, a:hover
 {
