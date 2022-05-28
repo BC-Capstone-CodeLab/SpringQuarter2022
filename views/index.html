@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"> 
+
+        <script type="module" src=https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.esm.js></script>
+        <link rel="stylesheet" type="text/css" href=https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.css />
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://golden-layout.com/assets/js/goldenlayout.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://golden-layout.com/assets/css/goldenlayout-base.css" />
+        <link type="text/css" rel="stylesheet" href="https://golden-layout.com/assets/css/goldenlayout-dark-theme.css" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="calcite-theme-dark">
+
+        <div class="page-second-content"> 
+
+            <!-------------------------- Header/ navbar ---------------------------->
+            <div class="nav-bar-container">
+                <header class="nav-bar-container-fixed">
+                    <div class="nav-bar-flex">
+                    <!---------- LEFT ------------>
+                        <div>
+                            <div class="nav-bar-link-container left-nav-bar">
+                                <a class="nav-bar-link">
+                                    <i class="bars icon"></i>
+                                    <span class="sr-only">Toggle main menu</span>
+                                </a>
+                                <a class="ui horizontal list">
+                                    <div class="item">
+                                        <img src="assets/images/pngwing.com.png" class="ui mini circular image">
+                                        <div class="content">
+                                            <div class="ui sub header">Eve</div>
+                                            <span>Student</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <!---------- CENTER ------------>
+                        <div>
+                            <div class="nav-bar-link-container center-nav-bar">
+                                <a class="nav-bar-link">
+                                    <i class="play icon"></i>
+                                    <span>Run</span>
+                                </a>        
+                            </div>
+                        </div>
+                    <!---------- RIGHT ------------>
+                        <div>
+                            <div class="nav-bar-link-container right-nav-bar">
+                                <div class="nested-nav-bar-link-container" >
+                                    <a class="nested-nav-bar-link">
+                                        <i class="comment icon"></i>
+                                        <span>Chat</span>
+                                    </a>
+                                    <a class="nested-nav-bar-link">
+                                        <i class="fa-solid fa-user-group"></i>
+                                        <span>Participants</span>
+                                    </a>
+                                </div>
+                                <div class="nested-nav-bar-link-container">
+                                    <a class="nested-nav-bar-link">
+                                        <i class="user plus icon"></i>
+                                        <span>Invite</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <!----------------------------------------------------------------------->
+
+            <!--<div id="test" style="background-color: rgb(120, 146, 111); height: 100%; width: 100%; border: 2px solid lightcoral"></div> -->
+    
+            <!----------------------------------------------------------------------->
+            <div class="main-container">
+                <div class="main">
+                    <!--------------------- Left side bar and Menu---------------->
+
+                    <div class="left-bar">
+                        <calcite-action-bar class="left-menu">
+                        <calcite-action-group>
+                            <calcite-action text="Add" icon="plus"></calcite-action>
+                            <calcite-action text="Save"  icon="save"></calcite-action> <!-- disabled -->
+                            <calcite-action text="Layers" active indicator icon="layers"></calcite-action>  
+                            <calcite-action text="Information" icon="information"></calcite-action>
+                            <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+                        </calcite-action-group>
+                        </calcite-action-bar>
+        
+                        <div class="action-list">
+                            <ul>
+                                <li> Files </li>
+                                <li> Other Resources</li>
+                                <li> Additional stuff 1</li>
+                                <li> Additional stuff 2</li>
+                                <li> Additional stuff 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------->
+
+                    <!------------------- GoldenLayout / IDE place holde ---------------->
+                    <div id="position-wpr">
+                        <div class='position'></div>
+                    </div>
+                    <!------------------------------------------------------------------->
+
+                </div>
+
+                <script type="text/javascript" src="script.js" ></script>
+            </div>
+            <!----------------------------------------------------------------------->
+        </div>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

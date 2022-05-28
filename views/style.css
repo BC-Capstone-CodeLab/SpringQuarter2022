@@ -1,0 +1,256 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+body, html
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    background-color: #222222 !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+.page-second-content
+{
+    padding: 10px;
+    padding-top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container
+{
+    height: calc(100% - 63px);
+    padding-top: 5px;
+}
+
+.main
+{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: .2rem;
+   /* border: 1px solid red; */
+    height: 100%;   
+}
+
+#position-wpr
+{   
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 90%;
+    overflow-x: auto;
+    border: 1px solid rgb(73, 70, 70);
+    border-radius: 6px;
+    /*max-width: calc(100% - 116.7px);*/
+    /*border: 2px solid green;*/
+}
+
+.position 
+{
+    /*width: inherit;*/
+    height: 100%;
+    /*border: 3px solid purple;  */  
+}
+.position *
+{
+    border-radius: 4px;
+}
+
+.left-bar > *
+{
+    height: 100%;
+    background-color: var(--calcite-ui-foreground-1);
+}
+
+
+.left-bar {
+    width: 14%;
+    height: 100%;
+    position: relative;
+    background-color: var(--calcite-ui-foreground-1);
+    border: 1px solid rgb(73, 70, 70);
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 3px;
+}
+
+.left-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    border-right: 1px solid rgba(181, 180, 180, 0.131);
+    z-index: 1000;
+}
+
+.action-list li
+{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.655);
+    list-style-type: none;
+    text-align: start;
+    padding-left: 4.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+
+}
+
+.action-list li:hover 
+{
+    background-color: black;
+    color: white;
+}
+
+.nav-bar-container
+{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+.nav-bar-container-fixed
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222222;
+    border-bottom: 0.5px solid rgb(73, 70, 70);
+}
+
+.nav-bar-flex
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: auto;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.nav-bar-flex > * 
+{
+    flex-grow: 1; 
+    height: 100%;
+}
+
+.nav-bar-link 
+{
+    padding: 10px;
+    font-size: 1.3rem;
+    align-self: center
+}
+.nested-nav-bar-link
+{
+    text-decoration: none;
+
+    padding: 5px;
+    font-size: 1.1rem;
+    align-self: center;
+
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.655);
+    background: #2b2b2b;
+}
+
+.nested-nav-bar-link:hover {
+    background-color: black; 
+    color: white;
+}
+
+.nav-bar-link-container
+{
+    width: 100%;
+    height: 100%;
+    /*border: 2px solid red;*/
+    display: flex;
+    gap: 1.5%;
+}
+
+/*.nav-bar-link-container > * {width: 100%;}*/
+.nested-nav-bar-link-container
+{
+    height: 100%;
+    /*border: 2px solid green;*/
+    display: flex;
+    gap: 1.5%; 
+    width: fit-content;
+    justify-content: flex-end;
+}
+
+.right-nav-bar 
+{
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.right-nav-bar > *:first-child
+{
+    flex-grow: 1;
+}
+
+.center-nav-bar 
+{
+    justify-content: center;
+}
+
+.center-nav-bar > .nav-bar-link 
+{
+    border-radius: 8px;
+    background: #222222;
+    color: #6cd97e;
+    border: .5px solid #044a10;
+}
+.center-nav-bar > .nav-bar-link:hover
+{
+    background: #02951a;
+    color: #6cd97e;
+}
+
+.left-nav-bar {
+    padding-left: 10px;
+    gap: 3%;
+}
+
+.left-nav-bar .nav-bar-link 
+{
+    border-radius: 8px;
+    font-size: 2rem;
+    color:rgba(255, 255, 255, 0.655);
+    padding: 4px;
+    z-index: 1000;
+}
+
+.left-nav-bar .nav-bar-link:hover
+{
+    background: #2b2b2b !important;
+}
+
+li:hover, a:hover
+{
+    cursor: pointer !important;
+}
+
+/*
+a 
+{
+    color:rgba(255, 255, 255, 0.655);
+    text-decoration: none;
+}
+
+.nav-bar-flex >*:first-child{}
+.nav-bar-flex >*:nth-child(2){}
+.nav-bar-flex >*:nth-child(3){}
+*/
