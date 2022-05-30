@@ -36,3 +36,9 @@ var config = {
   $(window).resize(()=> {
     myLayout.updateSize();
   });
+
+/* Activate Droppeddown */
+  $('select.dropdown')
+  .dropdown({
+    allowAdditions: true
+  });
