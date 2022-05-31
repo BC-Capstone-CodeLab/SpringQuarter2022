@@ -6,7 +6,7 @@ var config = {
   };
 
   
-  var myLayout = new GoldenLayout( config );
+  var myLayout = new GoldenLayout( config, $('.ide-content') );
   
   myLayout.registerComponent( 'studentIDE', function( container, state ){
     var c = function() { return Math.floor( Math.random() * 255 ).toString( 16 ); };
