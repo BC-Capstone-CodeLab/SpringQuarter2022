@@ -24,11 +24,10 @@ var config = {
   require( ['vs/editor/editor.main'], () => {
 
     myLayout.registerComponent( 'studentIDE', function( container, state ){
-      var c = function() { return Math.floor( Math.random() * 255 ).toString( 16 ); };
-  
+      //var c = function() { return Math.floor( Math.random() * 255 ).toString( 16 ); };
       //container.getElement().css( 'background-color', '#' + c() + c() + c() );
       //container.getElement().html( '<h2>' + state.text + '</h2>');
-
+      console.log(container.getElement()[0])
       let editor = monaco.editor.create(container.getElement()[0] /* Root */, {
             automaticLayout: true,
             theme: "vs-dark",
