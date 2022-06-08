@@ -1,20 +1,51 @@
+var studentEditor = [];
+
+/** GOLDEN LAYOUT INITIAL CONFIGURATION */
 var config = {
+    settings: {
+      showPopoutIcon: false,
+      reorderEnabled: true,
+      showMaximiseIcon: false,
+      showCloseIcon: false
+    },
+    dimensions: {
+        borderWidth: 3,
+        headerHeight: 22
+    },
     content: [{
       type: 'stack',
       content: []
     }]
   };
 
-  
+  /** GOLDEN LAYOUT INSTENCE */
   var myLayout = new GoldenLayout( config, $('.ide-content') );
   
-  myLayout.registerComponent( 'studentIDE', function( container, state ){
-    var c = function() { return Math.floor( Math.random() * 255 ).toString( 16 ); };
+  require( ['vs/editor/editor.main'], () => {
 
-    container.getElement().css( 'background-color', '#' + c() + c() + c() );
-    container.getElement().html( '<h2>' + state.text + '</h2>');
+    myLayout.registerComponent( 'studentIDE', function( container, state ){
+      var c = function() { return Math.floor( Math.random() * 255 ).toString( 16 ); };
+  
+      //container.getElement().css( 'background-color', '#' + c() + c() + c() );
+      //container.getElement().html( '<h2>' + state.text + '</h2>');
+
+      let editor = monaco.editor.create(container.getElement()[0] /* Root */, {
+            automaticLayout: true,
+            theme: "vs-dark",
+            scrollBeyondLastLine: false,
+            readOnly: state.readOnly,
+            language: "plaintext",
+            minimap: {
+                enabled: false
+            }
+      });
+
+      studentEditor.push(editor);
+  
+    });
 
   });
+
   
   myLayout.init();
 
